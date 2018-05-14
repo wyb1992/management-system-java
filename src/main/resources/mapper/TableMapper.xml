@@ -10,4 +10,20 @@
         WHERE p.OBJECT_ID = #{objectId}
     </select>
 
+    <select id="getObject" parameterType="java.lang.Long" resultType="java.lang.String">
+        SELECT
+            o.NAME
+        FROM
+            bdms_object o
+        WHERE o.OBJECT_ID = #{objectId}
+    </select>
+
+    <select id="dataList" resultType="com.alibaba.fastjson.JSONObject">
+        SELECT
+          *
+        FROM  ${name}
+        WHERE DELETE_FLAG = 'N'
+        LIMIT ${pageNum}, ${pageRow}
+    </select>
+
 </mapper>

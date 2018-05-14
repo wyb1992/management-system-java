@@ -10,4 +10,8 @@ import java.util.List;
 public interface TableDao {
 
     List<JSONObject> propertyList(Long objectId);
+
+    String getObject(Long objectId);
+
+    List<JSONObject> dataList(JSONObject jsonObject);
 }

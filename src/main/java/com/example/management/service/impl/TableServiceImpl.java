@@ -24,4 +24,11 @@ public class TableServiceImpl implements TableService {
         return CommonUtil.successPage(list);
     }
 
+    @Override
+    public JSONObject dataList(JSONObject requestJson) {
+        String tableName = tableDao.getObject(requestJson.getLong("objectId"));
+        requestJson.put("name", tableName);
+        List<JSONObject> list = tableDao.dataList(requestJson);
+        return CommonUtil.successPage(list);
+    }
 }

@@ -14,4 +14,12 @@ public interface TableService {
      * @return
      */
     JSONObject propertyList(Long objectId);
+
+    /**
+     * 获取对象数据列表
+     *
+     * @param requestJson
+     * @return
+     */
+    JSONObject dataList(JSONObject requestJson);
 }
