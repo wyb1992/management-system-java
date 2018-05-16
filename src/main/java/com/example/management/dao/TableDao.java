@@ -14,4 +14,6 @@ public interface TableDao {
     String getObject(Long objectId);
 
     List<JSONObject> dataList(JSONObject jsonObject);
+
+    void updateDetail(JSONObject requestJson);
 }

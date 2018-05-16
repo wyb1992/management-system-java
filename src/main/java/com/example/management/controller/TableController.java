@@ -4,9 +4,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.example.management.service.TableService;
 import com.example.management.util.CommonUtil;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -41,5 +39,16 @@ public class TableController {
     @GetMapping("/data")
     public JSONObject dataList(HttpServletRequest request) {
         return tableService.dataList(CommonUtil.request2Json(request));
+    }
+
+    /**
+     * 获取对象属性列表
+     *
+     * @param requestJson
+     * @return
+     */
+    @PostMapping("/updateDetail")
+    public JSONObject updateDetail(@RequestBody JSONObject requestJson) {
+        return tableService.updateDetail(requestJson);
     }
 }

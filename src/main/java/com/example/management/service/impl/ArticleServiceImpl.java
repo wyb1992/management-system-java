@@ -44,7 +44,7 @@ public class ArticleServiceImpl implements ArticleService {
     }
 
     /**
-     * 更新文章
+     * 更新详情数据
      *
      * @param jsonObject
      * @return
@@ -52,7 +52,7 @@ public class ArticleServiceImpl implements ArticleService {
     @Override
     @Transactional(rollbackFor = Exception.class)
     public JSONObject updateArticle(JSONObject jsonObject) {
-        articleDao.updateArticle(jsonObject);
+//        articleDao.updateArticle(jsonObject);
         return CommonUtil.successJson();
     }
 }

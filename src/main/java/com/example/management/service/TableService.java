@@ -22,4 +22,12 @@ public interface TableService {
      * @return
      */
     JSONObject dataList(JSONObject requestJson);
+
+    /**
+     * 更新详情数据
+     *
+     * @param requestJson
+     * @return
+     */
+    JSONObject updateDetail(JSONObject requestJson);
 }

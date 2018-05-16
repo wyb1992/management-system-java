@@ -26,4 +26,10 @@
         LIMIT ${pageNum}, ${pageRow}
     </select>
 
+    <update id="updateDetail" parameterType="com.alibaba.fastjson.JSONObject">
+        UPDATE article
+        SET
+        content = #{content}
+        WHERE id = #{id}
+    </update>
 </mapper>
